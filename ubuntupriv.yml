@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+	name: ubuntu-priv
+	labels:
+		app: ubuntu-priv
+spec:
+	replicas: 1
+	selector:
+		matchLabels:
+			app: ubuntu-priv
+	template:
+		metadata:
+			labels:
+				app: ubuntu-priv
+		spec:
+			containers:
+				- name: ubuntu
+				image: ubuntu
+				securityContext:
+					privileged: true
+				
