@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: ubuntu
-        - image: ubuntu
-        - securityContext:
-            privileged: true
+        image: ubuntu
+        securityContext:
+           privileged: true
