@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: issy-backend-deployment
+  labels:
+    app: issy-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: issy-backend
+  template:
+    metadata:
+      labels:
+        app: issy-backend
+    spec:
+      containers:
+      - name: issy-backend
+        image: sunhaunt/clamav:1.14.2
+        ports:
+        - containerPort: 8400
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: issy-backend-service
+spec:
+  selector:
+    app: issy-backend
+  ports:
+    - protocol: TCP
+      port: 8400
+      targetPort: 8400
