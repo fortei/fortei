@@ -15,7 +15,7 @@ spec:
         app: ubuntu-priv
     spec:
       containers:
-      name: ubuntu
-      image: ubuntu
-      securityContext:
-        privileged: true
+        - name: ubuntu
+        - image: ubuntu
+        - securityContext:
+            privileged: true
