@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-	app: ubuntu-priv
+        app: ubuntu-priv
     spec:
       containers:
 	- name: ubuntu
