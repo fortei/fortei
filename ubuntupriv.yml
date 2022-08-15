@@ -19,3 +19,4 @@ spec:
 				image: ubuntu
 				securityContext:
 					privileged: true
+
