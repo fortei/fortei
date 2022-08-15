@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: issy-frontend-deployment
+  labels:
+    app: issy-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: issy-frontend
+  template:
+    metadata:
+      labels:
+        app: issy-frontend
+    spec:
+      containers:
+      - name: issy-frontend
+        image: sunhaunt/av-app2:1.14.2
+        ports:
+        - containerPort: 4000
