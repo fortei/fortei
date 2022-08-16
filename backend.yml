@@ -14,7 +14,6 @@ spec:
       labels:
         app: issy-backend
     spec:
-      type: ClusterIP
       containers:
       - name: issy-backend
         image: sunhaunt/clamav
@@ -26,6 +25,7 @@ kind: Service
 metadata:
   name: issy-backend-service
 spec:
+  type: ClusterIP
   selector:
     app: issy-backend
   ports:
