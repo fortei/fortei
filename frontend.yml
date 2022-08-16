@@ -14,7 +14,6 @@ spec:
       labels:
         app: issy-frontend
     spec:
-      type: ClusterIP
       containers:
       - name: issy-frontend
         image: sunhaunt/av-app2
@@ -26,6 +25,7 @@ kind: Service
 metadata:
   name: issy-frontend-service
 spec:
+  type: ClusterIP
   selector:
     app: issy-frontend
   ports:
