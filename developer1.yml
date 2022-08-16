@@ -14,8 +14,9 @@ spec:
       labels:
         app: issy-frontend
     spec:
+      type: ClusterIP
       containers:
       - name: issy-frontend
-        image: sunhaunt/av-app2:1.14.2
+        image: sunhaunt/av-app2
         ports:
         - containerPort: 4000
