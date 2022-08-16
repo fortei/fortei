@@ -14,9 +14,10 @@ spec:
       labels:
         app: issy-backend
     spec:
+      type: ClusterIP
       containers:
       - name: issy-backend
-        image: sunhaunt/clamav:1.14.2
+        image: sunhaunt/clamav
         ports:
         - containerPort: 8400
 
